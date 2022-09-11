@@ -8,7 +8,7 @@
 }
 
 .cart_items {
-  max-height: 500px;
+  height: 500px;
   overflow-y: scroll;
 }
 
@@ -141,4 +141,18 @@
   display: flex;
   align-items: center;
   color: #81aa66;
+}
+.cart_items_delete {
+  position: absolute;
+  top: 39px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  font-size: 24px;
+  color: white;
+  background-color: #dd6e6e;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

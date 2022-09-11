@@ -4,11 +4,12 @@ import { RootState } from '../../../store/Store';
 import { setIsMenuOpen } from './reducers/AppReducer';
 import user from '../../assets/images/user-pic.svg';
 import logo from '../../assets/images/logo-horizontal.svg';
+import { setActiveTab } from '../../../routes/listings/reducer/ListingReducer';
+import { projectData } from '../../data/Data';
 
 const HeaderSideNav = () => {
   const dispatch = useDispatch();
   const { isMenuOpen } = useSelector((state: RootState) => state.common);
-  const services = ['Vapes', 'Extracts', 'Edibles', 'Flowers', 'Accessories'];
   return (
     <div
       className="header_menu_screen"
@@ -39,9 +40,13 @@ const HeaderSideNav = () => {
         </p>
         <div>
           <p className="header_menu_screen_inner_explore">Explore</p>
-          {services?.map((service) => (
-            <p key={service} className="header_menu_screen_inner_category">
-              {service}
+          {projectData?.map((service) => (
+            <p
+              onClick={() => dispatch(setActiveTab(service.category))}
+              key={service.category}
+              className="header_menu_screen_inner_category"
+            >
+              {service.category}
             </p>
           ))}
         </div>

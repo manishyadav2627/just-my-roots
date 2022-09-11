@@ -19,7 +19,10 @@ const SearchBar = ({
             type="text"
             name="search"
             id="search"
-            onChange={({ target: { value } }) => setInputValue(value)}
+            onChange={({ target: { value } }) => {
+              searchHandler(value);
+              setInputValue(value);
+            }}
             placeholder="Search Here"
             value={inputValue}
             className="search_bar"

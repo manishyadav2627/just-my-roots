@@ -3,6 +3,7 @@ import AppReducer from '../common/components/layout/reducers/AppReducer';
 import ListingReducer from '../routes/listings/reducer/ListingReducer';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import CartReducer from '../routes/cart/reducer/CartReducer';
 
 const persistConfig = {
   key: 'root',
@@ -10,7 +11,7 @@ const persistConfig = {
   whitelist: ['cartList'],
 };
 
-const persistedReducer = persistReducer(persistConfig, ListingReducer);
+const persistedReducer = persistReducer(persistConfig, CartReducer);
 export const store = configureStore({
   reducer: {
     common: AppReducer,

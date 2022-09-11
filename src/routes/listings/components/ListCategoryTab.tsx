@@ -1,20 +1,23 @@
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { projectData } from '../../../common/data/Data';
+import { RootState } from '../../../store/Store';
+import { setActiveTab } from '../reducer/ListingReducer';
 
-const ListCategoryTab = ({ category }: { category: string }) => {
-  const [active, setActive] = useState(0);
-  const data = ['manish', 'manishj', 'manishk', 'manishl'];
+const ListCategoryTab = () => {
+  const { activeTab } = useSelector((state: RootState) => state.listing);
+  const dispatch = useDispatch();
   return (
     <div className="category_nav">
-      {data?.map((category, index) => (
+      {projectData?.map((product) => (
         <button
           type="button"
-          key={category}
-          onClick={() => setActive(index)}
+          key={product.category}
+          onClick={() => dispatch(setActiveTab(product.category))}
           className={` category_nav_item ${
-            active === index && 'category_nav_item_active'
+            activeTab === product.category && 'category_nav_item_active'
           }`}
         >
-          {category}
+          {product.category}
         </button>
       ))}
     </div>
