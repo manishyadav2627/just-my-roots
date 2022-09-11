@@ -1,0 +1,263 @@
+.main_app {
+  width: 100%;
+}
+
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.w_full {
+  width: 100%;
+}
+
+.m_auto {
+  margin: auto;
+}
+
+.splash_screen {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.splash_screen img {
+  width: 93px;
+  height: 100.18px;
+  object-fit: contain;
+}
+
+.header {
+  width: 100%;
+  padding: 28px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_left {
+  display: flex;
+  align-items: center;
+  column-gap: 22px;
+}
+
+.header_right {
+  display: flex;
+  align-items: center;
+  column-gap: 28px;
+}
+
+.header_logo {
+  width: 79px;
+  height: 35.7px;
+  object-fit: contain;
+}
+
+.header_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+  }
+}
+
+.header_menu_screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  bottom: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.header_menu_screen_inner {
+  background: white;
+  overflow-y: auto;
+  width: 295px;
+  min-height: 100vh;
+  height: 100%;
+  padding: 30px;
+}
+
+.header_right_user {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.close_header_menu {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 141%;
+  color: #e56c44;
+  text-align: right;
+}
+
+.header_menu_screen_inner_user {
+  margin: 21px auto 18px;
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+}
+
+.header_menu_screen_inner_category {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 141%;
+  color: #999999;
+  cursor: pointer;
+  margin-bottom: 45px;
+}
+
+.header_menu_screen_inner_explore {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 141%;
+  color: #999999;
+  cursor: pointer;
+  margin-bottom: 45px;
+  color: #81aa66;
+}
+
+.header_menu_screen_inner_category:hover {
+  color: #81aa66;
+}
+
+.header_menu_screen_inner_logout {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 141%;
+  color: #e56c44;
+  margin-top: 45px;
+}
+
+.header_menu_screen_inner_user_mail {
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 141%;
+  text-align: center;
+  color: #1e0702;
+  width: 100%;
+}
+
+.onboarding {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url('../images/background-green.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.onboarding_inner_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.onboarding_inner_btns_child {
+  width: 125px;
+  height: 52px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 141%;
+  text-align: center;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.onboarding_inner_btns_child:hover {
+  color: #81aa66;
+  background: #ffffff;
+  border: 0;
+}
+
+.onboarding_inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.onboarding_inner_btns_child_active {
+  @extend .onboarding_inner_btns_child;
+  color: #81aa66;
+  background: #ffffff;
+  border: 0;
+}
+
+.onboarding_inner_btns_child_active:hover {
+  @extend .onboarding_inner_btns_child;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #ffffff;
+}
+
+.onboarding_inner_google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 12px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 141%;
+  text-align: center;
+  margin: 33px auto 61px;
+  color: #ffffff;
+}
+
+.onboarding_inner_child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 314px;
+}
+
+.onboarding_inner_child_text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.onboarding_inner_google img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.listing_modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  bottom: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+}
